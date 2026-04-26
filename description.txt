@@ -1,0 +1,52 @@
+ScopeTrace
+==========
+엔터프라이즈 AX 에이전트의 권한 경계 위반을 증거 기반으로 테스트하는 시스템.
+
+
+문제
+----
+사내 에이전트는 (1) 외부 입력, (2) 내부 권한 데이터, (3) 에이전틱 권한
+세 가지를 동시에 다룬다. 신뢰도 낮은 (1)이 (3)을 통해 (2)를 끌어내거나
+밖으로 흘리는 흐름이 새로운 실패 모드인데, 기존 가드레일은 프롬프트나
+출력만 검사할 뿐 이 "흐름"을 보지 못한다.
+
+
+접근
+----
+결정론 우선, 의미론은 보조. 모든 결정은 트레이스 증거에 묶인다.
+
+  IntentManifest   요청별 권한 스코프(allowed/blocked tools·sources·
+                   output classes·recipient).
+  HardGateRule     에이전트 프로필에서 도출된 결정론 규칙.
+                   사람 승인 후에만 런타임 입력이 됨.
+  EvidencePack     공격 결과의 분류·근거·신뢰도. 승인된 팩만
+                   의미론 판단의 선례로 작동.
+
+런타임 정책 코드 P0–P6:
+  P0 외부→권한 데이터 검색       P4 출처 세탁
+  P1 민감 데이터 외부 출력       P5 메모리 오염
+  P2 외부 유발 상태 변경         P6 위험 툴 시퀀스
+  P3 은닉 egress(URL/링크 패턴)
+
+
+파이프라인
+----------
+  agent profile
+       ▼  Hard-Gate Architect → 제안 규칙 → 승인 → 런타임 입력
+       ▼  Attack Planner → A1–A4 전략 1–6개
+       ▼  Parallel Specialist Attackers (5–10턴, 적응형)
+       ▼  Evidence-Pack Evaluator → 후보 팩 → 승인
+       ▼  Runtime Decision Engine
+          (hard gate → category → 선례 주입 → 결정)
+
+
+모드
+----
+  observe   결정만 기록
+  enforce   불안전 툴콜 실행 전 차단
+  replay    동일 케이스 양 모드 비교
+
+
+스택
+----
+Next.js 16 / React 19 / PostgreSQL(Neon) / OpenAI gpt-5.5 / Zod

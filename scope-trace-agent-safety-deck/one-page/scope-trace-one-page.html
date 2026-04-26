@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScopeTrace One-Page Architecture</title>
+  <style>
+    :root {
+      --bg: #06090d;
+      --panel: rgba(13, 22, 29, 0.92);
+      --panel2: rgba(9, 18, 24, 0.92);
+      --ink: #f4efe6;
+      --muted: #aeb7bd;
+      --cyan: #39d5ff;
+      --red: #ff4b3e;
+      --amber: #e3a64b;
+      --line: rgba(57, 213, 255, 0.55);
+      --hair: rgba(244, 239, 230, 0.16);
+      --font: "Arial Narrow", "IBM Plex Sans Condensed", "Helvetica Neue", Arial, sans-serif;
+      --mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font);
+    }
+
+    .slide {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      padding: 46px 70px;
+      background:
+        radial-gradient(circle at 50% 46%, rgba(57,213,255,0.10), transparent 42%),
+        radial-gradient(circle at 82% 16%, rgba(255,75,62,0.08), transparent 30%),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.028) 1px, transparent 1px),
+        #06090d;
+      background-size: auto, auto, 64px 64px, 64px 64px, auto;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.10) 0.6px, transparent 0.6px);
+      background-size: 7px 7px;
+      opacity: 0.07;
+    }
+
+    .chrome {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      letter-spacing: 0.18em;
+      font-family: var(--mono);
+      font-size: 18px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .title-row {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 50px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 58px;
+      line-height: 0.98;
+      letter-spacing: -0.015em;
+      font-weight: 900;
+      max-width: 950px;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: 23px;
+      line-height: 1.28;
+      color: #d7ddd9;
+      max-width: 920px;
+    }
+
+    .north-star {
+      border: 1.5px solid rgba(57,213,255,0.62);
+      background: rgba(8, 21, 28, 0.88);
+      border-radius: 18px;
+      padding: 22px 26px;
+      min-height: 146px;
+    }
+
+    .label {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    .north-star .statement {
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.26fr 0.94fr;
+      gap: 28px;
+      height: 610px;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .panel {
+      position: relative;
+      border: 1.4px solid var(--hair);
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .panel.problem {
+      border-color: rgba(255,75,62,0.52);
+      min-height: 220px;
+    }
+
+    .panel.problem .label { color: var(--red); }
+
+    .mini-flow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .node {
+      border: 1.2px solid rgba(57,213,255,0.58);
+      background: rgba(7, 18, 24, 0.96);
+      border-radius: 12px;
+      padding: 10px 14px;
+      white-space: nowrap;
+    }
+
+    .arrow { color: var(--cyan); font-size: 27px; }
+    .risk { color: var(--red); }
+    .amber { color: var(--amber); }
+    .cyan { color: var(--cyan); }
+
+    .bullets {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bullets li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 20px;
+      line-height: 1.18;
+      color: #d7ddd9;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: var(--red);
+      margin-top: 9px;
+      flex: 0 0 auto;
+    }
+
+    .center-card {
+      border: 2px solid rgba(57,213,255,0.78);
+      border-radius: 24px;
+      background: rgba(8, 24, 33, 0.94);
+      padding: 24px;
+      height: 100%;
+    }
+
+    .runtime-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-family: var(--mono);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .intercept {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .step {
+      border: 1.2px solid rgba(57,213,255,0.50);
+      border-radius: 14px;
+      padding: 14px 12px;
+      background: rgba(6, 14, 20, 0.88);
+      min-height: 104px;
+    }
+
+    .step b {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .step span {
+      display: block;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.22;
+    }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 18px 0;
+    }
+
+    .gate {
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(4, 12, 18, 0.92);
+      min-height: 158px;
+    }
+
+    .gate.hard { border: 1.6px solid rgba(255,75,62,0.68); }
+    .gate.semantic { border: 1.6px solid rgba(227,166,75,0.76); }
+
+    .gate h3 {
+      margin: 0 0 12px;
+      font-size: 27px;
+      line-height: 1;
+    }
+
+    .gate p {
+      margin: 0;
+      color: #d9ded9;
+      font-size: 19px;
+      line-height: 1.22;
+    }
+
+    .outcomes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .outcome {
+      border-radius: 14px;
+      padding: 13px;
+      text-align: center;
+      font-size: 23px;
+      font-weight: 900;
+      border: 1.2px solid var(--hair);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .outcome.allow { color: var(--cyan); border-color: rgba(57,213,255,0.55); }
+    .outcome.block { color: var(--red); border-color: rgba(255,75,62,0.55); }
+    .outcome.review { color: var(--amber); border-color: rgba(227,166,75,0.55); }
+
+    .loop {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .loop-item {
+      border: 1.2px solid rgba(57,213,255,0.42);
+      border-radius: 14px;
+      padding: 11px 13px;
+      background: rgba(6, 15, 21, 0.92);
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      min-height: 62px;
+    }
+
+    .num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(57,213,255,0.12);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .loop-item b {
+      display: block;
+      font-size: 21px;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .loop-item span {
+      display: block;
+      font-size: 15px;
+      line-height: 1.18;
+      color: var(--muted);
+    }
+
+    .stack {
+      border-color: rgba(227,166,75,0.50);
+      min-height: 112px;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .stack-box {
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(227,166,75,0.48);
+      background: rgba(227,166,75,0.07);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .bottom-claim {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      bottom: 18px;
+      border: 1.6px solid rgba(255,75,62,0.60);
+      border-radius: 18px;
+      background: rgba(11, 15, 20, 0.94);
+      padding: 12px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .bottom-claim .main {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .bottom-claim .sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 660px;
+      line-height: 1.14;
+    }
+  </style>
+</head>
+<body>
+  <main class="slide">
+    <div class="chrome">
+      <div class="brand">SCOPETRACE · ONE-PAGE ARCHITECTURE</div>
+      <div>TOOL-LEVEL GOVERNANCE FOR AUTONOMOUS AGENTS</div>
+    </div>
+
+    <section class="title-row">
+      <div>
+        <h1>AI safety must move from prompt rules to runtime action control.</h1>
+        <div class="subtitle">
+          As agent autonomy increases, the safety unit is no longer the answer.
+          It is whether each tool call is aligned with the current intent, authority, context, and egress boundary.
+        </div>
+      </div>
+      <div class="north-star">
+        <div class="label">North Star</div>
+        <div class="statement">
+          Agent가 현재 환경의 <span class="cyan">의도</span>와 aligned된 방향으로만
+          tool을 사용할 수 있어야 한다.
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="col">
+        <div class="panel problem">
+          <div class="label">Problem</div>
+          <div class="mini-flow">
+            <span class="node">Agent</span><span class="arrow">→</span>
+            <span class="node">Tool</span><span class="arrow">→</span>
+            <span class="node risk">Action</span>
+          </div>
+          <ul class="bullets">
+            <li><span class="dot"></span><span>잘못된 / 의도되지 않은 방향으로 tool이 사용됨</span></li>
+            <li><span class="dot"></span><span>Context pollution이 발생하고 safety boundary가 무너짐</span></li>
+            <li><span class="dot"></span><span>Enterprise에서는 한 번의 miss가 큰 blast radius로 확장됨</span></li>
+          </ul>
+        </div>
+
+        <div class="panel stack">
+          <div class="label">Why Existing Guardrails Are Not Enough</div>
+          <ul class="bullets">
+            <li><span class="dot" style="background:var(--amber)"></span><span>System prompt는 행동 경로를 추적하지 못함</span></li>
+            <li><span class="dot" style="background:var(--amber)"></span><span>Tool description은 권한·출처·수신자 맥락을 알지 못함</span></li>
+            <li><span class="dot" style="background:var(--amber)"></span><span>Tool-level autonomy가 커질수록 runtime decision layer가 필요함</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="center-card">
+        <div class="runtime-title">
+          <span>ScopeTrace Runtime Layer</span>
+          <span>intercept every tool call</span>
+        </div>
+
+        <div class="intercept">
+          <div class="step"><b>1. Tool Call</b><span>agent가 행동을 요청하는 순간 캡처</span></div>
+          <div class="step"><b>2. ScopeTrace</b><span>intent, source, tool, recipient context를 결합</span></div>
+          <div class="step"><b>3. Decision</b><span>hard gate 또는 semantic review로 판단</span></div>
+          <div class="step"><b>4. Tool Result</b><span>allow/block/review 결과와 evidence를 기록</span></div>
+        </div>
+
+        <div class="decision">
+          <div class="gate hard">
+            <h3 class="risk">Hard Gate</h3>
+            <p>반드시 지켜져야 하는 deterministic rule. 외부 입력이 privileged retrieval, CRM mutation, memory write, sensitive egress를 유도하면 즉시 차단.</p>
+          </div>
+          <div class="gate semantic">
+            <h3 class="amber">Semantic Decision</h3>
+            <p>명확히 금지되지는 않았지만 맥락 판단이 필요한 경우. Evidence Packet과 precedent를 기반으로 review 또는 policy proposal 생성.</p>
+          </div>
+        </div>
+
+        <div class="outcomes">
+          <div class="outcome allow">ALLOW</div>
+          <div class="outcome block">BLOCK</div>
+          <div class="outcome review">REVIEW</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="panel">
+          <div class="label">Self ScopeTrace Update Loop</div>
+          <div class="loop">
+            <div class="loop-item"><div class="num">1</div><div><b>RedTeam Running Stack</b><span>Attack Planner + Specialist Attackers generate multi-turn tool-use attacks.</span></div></div>
+            <div class="loop-item"><div class="num">2</div><div><b>Evidence Packet</b><span>Trace, finding, source context, policy reason, safe alternative.</span></div></div>
+            <div class="loop-item"><div class="num">3</div><div><b>Hard Gate Proposal</b><span>Candidate rule or precedent, not active until approved.</span></div></div>
+            <div class="loop-item"><div class="num">4</div><div><b>Human Approval</b><span>Approve / reject / revise before runtime enforcement.</span></div></div>
+            <div class="loop-item"><div class="num">5</div><div><b>Replay Proof</b><span>Same attack must be replayed after patch to prove the guardrail works.</span></div></div>
+          </div>
+        </div>
+
+        <div class="panel stack">
+          <div class="label">Technical Stack</div>
+          <div class="stack-grid">
+            <div class="stack-box">Creative Operation Stack</div>
+            <div class="stack-box">RedTeam Running Stack</div>
+            <div class="stack-box">Auto-Governing Decision Maker</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-claim">
+      <div class="main">The unit of AI safety is no longer the answer. <span class="cyan">It is the authorized action.</span></div>
+      <div class="sub">ScopeTrace turns every agent action into a traceable, enforceable, and replayable governance decision.</div>
+    </div>
+  </main>
+</body>
+</html>

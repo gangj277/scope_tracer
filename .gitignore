@@ -4,3 +4,7 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Local recordings / large media
+*.mov
+*.mp4
