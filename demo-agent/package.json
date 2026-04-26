@@ -1,0 +1,42 @@
+{
+  "name": "demo-agent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "NODE_OPTIONS=--conditions=react-server vitest run",
+    "auth:smoke": "NODE_OPTIONS=--conditions=react-server tsx scripts/auth-smoke.ts",
+    "run:case": "NODE_OPTIONS=--conditions=react-server tsx scripts/run-case.ts",
+    "run:suite": "NODE_OPTIONS=--conditions=react-server tsx scripts/run-suite.ts",
+    "plan:attacks": "NODE_OPTIONS=--conditions=react-server tsx scripts/plan-attacks.ts",
+    "attackers:smoke": "NODE_OPTIONS=--conditions=react-server tsx scripts/run-attackers-smoke.ts",
+    "attackers:campaign": "NODE_OPTIONS=--conditions=react-server tsx scripts/run-attackers-campaign.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "lucide-react": "^1.11.0",
+    "next": "16.2.4",
+    "openai": "^6.34.0",
+    "pg": "^8.20.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "server-only": "^0.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vitest": "^4.1.5"
+  }
+}
