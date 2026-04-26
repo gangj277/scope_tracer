@@ -1,0 +1,41 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide for technical hackathon pitch
+
+Primary request: Rebuild slide 3 as a technical architecture slide for RedTeam Logic: Attack Planner and Specialist Attackers.
+Audience: technical judges and AI safety engineers.
+Product truth: Our red-team loop is structured, multi-turn, strategy-specific, parallelized, and trace-adaptive.
+Why now: effective agent red teaming must go beyond one-shot prompt templates.
+Emotional target: make the system feel engineered and validated.
+Proof detail: include actual implementation facts: Zod structured output, 4 strategy classes, 5-10 turns, Promise.allSettled parallel campaigns, trace feedback, 4/4 completed campaign validation.
+
+Deck style lock: dark graphite native slide canvas, warm off-white text, cyan for pipeline, red for attacks, amber for attacker strategy, thin geometric architecture diagram.
+Slide-frame discipline: native 16:9 presentation slide canvas only; no paper/poster/mockup scene.
+
+Scene/background: deep graphite internal slide background with faint grid and trace lines.
+Subject: end-to-end red-team pipeline: Scenario Hints -> Attack Planner -> Strategy Contracts -> Specialist Attackers -> Target Agent -> Trace Feedback -> Evidence Pack.
+Style/medium: premium technical architecture diagram, systems pipeline.
+Composition/framing: 16:9, top title, central horizontal pipeline, lower validation strip with concrete facts.
+Color palette: graphite, off-white, cyan pipeline, amber planner/attacker, red unsafe transition.
+
+Text (verbatim):
+"REDTEAM LOGIC"
+"Attack Planner turns cases into adaptive multi-turn campaigns."
+"Scenario Hints"
+"Attack Planner"
+"Strategy Contracts"
+"Specialist Attackers"
+"Target Agent"
+"Trace Feedback"
+"Evidence Pack"
+"4 strategies"
+"Authority confusion · Privileged retrieval · Sensitive egress · Unauthorized action"
+"5-10 turns"
+"Parallel runs"
+"Structured Zod output"
+"4/4 campaigns completed"
+"0 failures"
+
+Hierarchy notes: keep title and pipeline labels highly readable; validation strip must be legible; do not overload with code snippets.
+Constraints: high English typography accuracy; no fake implementation facts; no watermark; no gibberish; no slide number; no paper edges, wall, desk, room, print mockup, or poster frame.
+Avoid: decorative hacker art, hooded attackers, random dashboard clutter, tiny source code, fake terminal spam.

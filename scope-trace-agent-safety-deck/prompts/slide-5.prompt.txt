@@ -1,0 +1,52 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide, final slide of a hackathon product pitch deck
+
+Primary request: Build a premium native presentation slide image showing ScopeTrace as the traceable, enforceable, replayable guardrail layer for authorized AI agents.
+
+Audience: AI safety judges, enterprise AI builders, product/security engineers.
+Product truth: ScopeTrace makes unsafe agent behavior observable, blockable, and replayable.
+Why now: Enterprises need guardrails that improve as agents gain more tools, memory, and operational authority.
+Emotional target: confidence that this is a real system architecture, not a generic safety slogan.
+Proof detail: show observe vs enforce comparison and the lifecycle loop from red-team evidence to hard gates and replay.
+
+Deck style lock: Premium dark enterprise safety command-center slide; graphite black background; warm off-white text; red only for observed attacks and blocked violations, cyan for enforced safe path and replay proof, amber for red-team inputs; thin geometric trace lines; native slide canvas only.
+Slide-frame discipline: this must read as a native 16:9 presentation slide canvas, not as a poster, paper sheet, framed print, desk scene, or photographed infographic.
+
+Scene/background: internal slide background only, deep graphite black with very low grain, faint technical grid, subtle trace lines.
+Subject: product proof slide with two columns: Observe Mode and Enforce Mode; below them a lifecycle loop: Red-team -> Evidence Pack -> Hard Gate -> Enforce -> Replay -> Improve.
+Style/medium: premium product architecture / demo proof slide, restrained enterprise safety diagram.
+Composition/framing: 16:9, title at top, two-column before/after proof in center, lifecycle loop along bottom. Presentation-distance readability.
+Lighting/mood: resolved, credible, product-ready.
+Color palette: graphite black, warm off-white, red for observe attack success, cyan for enforce/replay path, amber for red-team input.
+Materials/textures: subtle internal slide grain only.
+
+Text (verbatim):
+"SCOPETRACE"
+"ScopeTrace makes agent guardrails traceable, enforceable, and replayable."
+"Observe Mode"
+"Attack succeeds"
+"Trace captured"
+"Finding generated"
+"Enforce Mode"
+"Unsafe tool blocked"
+"Safer path used"
+"Replay proof recorded"
+"Red-team"
+"Evidence Pack"
+"Hard Gate"
+"Enforce"
+"Replay"
+"Improve"
+"A guardrail is credible only when the same attack can be replayed after the patch."
+
+Hierarchy notes:
+- "SCOPETRACE" is a compact overline/brand label.
+- Action title is dominant.
+- Observe vs Enforce columns should be large and balanced.
+- Lifecycle loop labels should be readable and not crowded.
+- Bottom proof line is strong and legible.
+
+Constraints: high English typography accuracy; keep text legible; preserve hierarchy; no watermark; no gibberish; no extra decorative icons; keep all design elements inside a clean slide canvas; no paper edges; no page curl; no wall or desk context; no framed-board look; no mockup scene.
+
+Avoid: generic AI startup splash screen, fake app screenshots, glossy 3D UI, humanoid robots, random dashboard clutter, tiny labels, poster-on-paper aesthetics.

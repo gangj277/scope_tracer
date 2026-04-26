@@ -1,0 +1,49 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide, third slide of a hackathon product pitch deck
+
+Primary request: Build a premium native presentation slide image explaining the core failure mode: untrusted input causing privileged action.
+
+Audience: AI safety judges, enterprise AI builders, product/security engineers.
+Product truth: The critical enterprise agent failure is unauthorized authority transfer from low-trust input to privileged systems.
+Why now: Agents combine untrusted customer language, private enterprise context, and tool authority.
+Emotional target: the audience should immediately understand the danger path.
+Proof detail: show a horizontal attack path from external ticket through agent tool chain into internal data and outward output/mutation.
+
+Deck style lock: Premium dark enterprise safety command-center slide; graphite black background; warm off-white text; red only for violation paths, cyan for protected systems, amber for external input; thin geometric trace lines; native slide canvas only.
+Slide-frame discipline: this must read as a native 16:9 presentation slide canvas, not as a poster, paper sheet, framed print, desk scene, or photographed infographic.
+
+Scene/background: internal slide background only, deep graphite black with very low grain, faint technical grid, subtle trace lines.
+Subject: horizontal breach diagram: External Ticket -> Agent Tool Chain -> Internal Data -> Customer Output / System Mutation, with a red "AUTHORITY BOUNDARY BREACH" crossing point.
+Style/medium: premium security systems diagram, restrained high-contrast keynote slide.
+Composition/framing: 16:9, top title, central horizontal flow, lower row of five violation category tiles, bottom quote strip. Presentation-distance readability.
+Lighting/mood: urgent, precise, evidence-driven.
+Color palette: graphite black, warm off-white text, amber external source, cyan internal systems, red breach path and warning boundary.
+Materials/textures: subtle internal slide grain only, no physical surface.
+
+Text (verbatim):
+"FAILURE MODE"
+"The critical failure is when untrusted input causes privileged action."
+"External Ticket"
+"Agent Tool Chain"
+"Internal Data"
+"Customer Output"
+"System Mutation"
+"AUTHORITY BOUNDARY BREACH"
+"Privileged retrieval"
+"Sensitive egress"
+"Unauthorized mutation"
+"Memory poisoning"
+"Source laundering"
+"The risk is that language becomes authority."
+
+Hierarchy notes:
+- Action title is dominant.
+- Horizontal flow labels must be large and readable.
+- Boundary breach label is red and visually central.
+- Five violation categories are compact tiles, not long paragraphs.
+- Bottom quote strip is short and legible.
+
+Constraints: high English typography accuracy; keep text legible; preserve hierarchy; no watermark; no gibberish; no extra decorative icons; keep all design elements inside a clean slide canvas; no paper edges; no page curl; no wall or desk context; no framed-board look; no mockup scene.
+
+Avoid: sensational hacking imagery, skulls, humanoid robots, neon cyberpunk city, stock hacker hoodies, tiny labels, overcomplicated arrows, poster-on-paper aesthetics.

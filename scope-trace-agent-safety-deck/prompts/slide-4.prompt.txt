@@ -1,0 +1,46 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide, fourth slide of a hackathon product pitch deck
+
+Primary request: Build a premium native presentation slide image defining the future safety architecture for autonomous agents.
+
+Audience: AI safety judges, enterprise AI builders, product/security engineers.
+Product truth: Future guardrails must control the full path from user intent to tool use, data provenance, runtime decision, egress, and replay.
+Why now: A single output filter cannot govern multi-step agent behavior across enterprise systems.
+Emotional target: the audience should feel the solution architecture is inevitable and rigorous.
+Proof detail: show a runtime control plane spanning six checkpoints from Intent Manifest to Replay Evidence.
+
+Deck style lock: Premium dark enterprise safety command-center slide; graphite black background; warm off-white text; red only for blocked risk, cyan for control plane, amber for external/untrusted input; thin geometric trace lines; native slide canvas only.
+Slide-frame discipline: this must read as a native 16:9 presentation slide canvas, not as a poster, paper sheet, framed print, desk scene, or photographed infographic.
+
+Scene/background: internal slide background only, deep graphite black with very low grain, faint technical grid, subtle trace lines.
+Subject: layered architecture diagram: a cyan horizontal "RUNTIME CONTROL PLANE" crossing six checkpoints: Intent Manifest, Data Provenance, Tool Scope, Runtime Decision, Egress Check, Replay Evidence.
+Style/medium: premium enterprise architecture slide, clean systems framework, restrained keynote diagram.
+Composition/framing: 16:9, title and short body at top-left, main architecture layer across center, bottom comparison callout. Presentation-distance readability.
+Lighting/mood: precise, constructive, architectural.
+Color palette: graphite black, warm off-white, cyan control layer, amber input node, red blocked action marker.
+Materials/textures: subtle internal slide grain only.
+
+Text (verbatim):
+"TO-BE SAFETY ARCHITECTURE"
+"Future guardrails must control the full path from intent to egress."
+"A single output filter cannot govern multi-step agent behavior."
+"Intent Manifest"
+"Data Provenance"
+"Tool Scope"
+"Runtime Decision"
+"Egress Check"
+"Replay Evidence"
+"Not just: Is this output safe?"
+"But: Was this action authorized by the original intent?"
+
+Hierarchy notes:
+- The title is dominant but leaves room for the architecture.
+- Six checkpoint labels must be readable.
+- "RUNTIME CONTROL PLANE" should appear as a cyan layer across the checkpoints.
+- Bottom comparison callout is clear and compact.
+
+Constraints: high English typography accuracy; keep text legible; preserve hierarchy; no watermark; no gibberish; no extra decorative icons; keep all design elements inside a clean slide canvas; no paper edges; no page curl; no wall or desk context; no framed-board look; no mockup scene.
+Do not include any slide number, page counter, date, footer metadata, or "04 / 06" style navigation text.
+
+Avoid: cloud architecture cliché, server rack photos, glossy 3D dashboards, random colored gradients, tiny unreadable labels, paper/poster aesthetics.

@@ -1,0 +1,43 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide for technical hackathon pitch
+
+Primary request: Rebuild slide 4 as a technical architecture slide for the ScopeTrace Engine.
+Audience: technical judges and AI safety engineers.
+Product truth: ScopeTrace enforces agent behavior by evaluating intent, source provenance, target data, tool metadata, prior tool path, and output egress.
+Why now: agent risk lives in transitions across user intent, tools, data classes, and recipients.
+Emotional target: make the guardrail engine feel precise, auditable, and non-hand-wavy.
+Proof detail: include the actual runtime sequence: parse tool args -> infer target sources -> evaluate runtime scope policy -> record trace/finding -> allow/block -> inspect output.
+
+Deck style lock: dark graphite native slide canvas, warm off-white text, cyan for policy engine, red for blocked transitions, amber for external/untrusted input, thin geometric architecture diagram.
+Slide-frame discipline: native 16:9 presentation slide canvas only; no paper/poster/mockup scene.
+
+Scene/background: deep graphite internal slide background, faint grid and trace lines.
+Subject: ScopeTrace Engine control plane with two layers: inputs and enforcement path.
+Style/medium: premium enterprise security architecture diagram.
+Composition/framing: 16:9, top title; left input bundle; center policy engine; right audit outputs; bottom egress inspection strip.
+Color palette: graphite, off-white, cyan control plane, red blocked action, amber external source.
+
+Text (verbatim):
+"SCOPETRACE ENGINE"
+"Every tool call is checked against intent, provenance, scope, and egress."
+"Inputs"
+"Intent Manifest"
+"Source Trust"
+"Data Class"
+"Tool Metadata"
+"Prior Tool Path"
+"Runtime Policy"
+"Hard Gate"
+"Semantic Review"
+"Allowed"
+"Blocked"
+"Trace Event"
+"Finding"
+"Agent Output"
+"Egress Check"
+"Canary · Covert URL · Source laundering"
+
+Hierarchy notes: title largest; engine path labels large; bottom egress strip readable.
+Constraints: high English typography accuracy; no fake fields; no watermark; no gibberish; no slide number; no paper edges, wall, desk, room, print mockup, or poster frame.
+Avoid: generic shield-only slide, cloud security cliché, tiny code blocks, excessive paragraphs, fake UI screenshots.

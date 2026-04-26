@@ -1,0 +1,47 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide, first slide of a hackathon product pitch deck
+
+Primary request: Build a premium native presentation slide image for the opening AS-IS frame of an AI safety deck.
+
+Audience: AI safety judges, enterprise AI builders, product/security engineers.
+Product truth: Current AI safety mostly protects model conversations, but authorized agents require behavior-level guardrails.
+Why now: AX agents are moving from answering to retrieving, mutating, remembering, and sending.
+Emotional target: crisp recognition of a structural gap; technical urgency without panic.
+Proof detail: include the old safety perimeter around a chat model, and show tool calls / CRM update / external email / memory write emerging beyond that perimeter.
+
+Slide-frame discipline: this must read as a native 16:9 presentation slide canvas, not as a poster, paper sheet, framed print, desk scene, or photographed infographic. Full-bleed slide composition; all visuals exist inside the slide, not inside a photographed environment.
+
+Scene/background: internal slide background only, deep graphite black with very low grain, faint technical grid, subtle trace lines.
+Subject: left-aligned opening title; center-left diagram of current AI safety stack around a chat model; right edge showing cracks where agentic actions appear beyond the old perimeter.
+Style/medium: premium enterprise safety command-center diagram, restrained keynote slide, clean geometric system map, thin linework, high contrast.
+Composition/framing: 16:9, strong safe margins, left title block takes 38% width; diagram occupies center and right; bottom callout strip spans the slide. Presentation-distance readability.
+Lighting/mood: dark command-center contrast, serious and precise, no sci-fi spectacle.
+Color palette: deep graphite background, warm off-white text, signal red for cracks/risks, electric cyan for existing system flow, muted amber for emerging external/untrusted action points.
+Materials/textures: subtle internal slide grain only, no paper edges.
+
+Text (verbatim):
+"AI SAFETY AS-IS"
+"Today’s AI safety stack was built for models that answer, not agents that act."
+"Prompt policies"
+"Jailbreak tests"
+"Content filters"
+"Model evals"
+"Output moderation"
+"Static access rules"
+"Tool call"
+"CRM update"
+"External email"
+"Memory write"
+"This protects conversations. It does not fully govern actions."
+
+Hierarchy notes:
+- "AI SAFETY AS-IS" is a small uppercase overline.
+- The action title is the largest text and must be readable.
+- The six current safety controls are medium-size labeled blocks around a central chat model.
+- The four agentic action labels appear on the right edge as emerging cracks / outbound nodes.
+- The bottom callout strip is concise and strongly legible.
+
+Constraints: high English typography accuracy; keep text legible; preserve hierarchy; no watermark; no gibberish; no extra decorative icons; keep all design elements inside a clean slide canvas; no paper edges; no page curl; no wall or desk context; no framed-board look; no mockup scene; no external drop shadow suggesting an object on a surface.
+
+Avoid: cheesy cyberpunk, generic AI brain art, stock corporate illustration, overdecorated infographic clutter, tiny unreadable labels, poster-on-paper aesthetics, desk photography, mounted presentation board, folded paper corners, print mockup framing, room context.

@@ -1,0 +1,41 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide for technical hackathon pitch
+
+Primary request: Rebuild slide 2 as research-to-architecture bridge.
+Audience: AI safety judges, enterprise AI builders, technical reviewers.
+Product truth: The relevant research points toward three requirements: dynamic red teaming, trace-level risk judgment, and runtime enforcement.
+Why now: single-turn prompts and static filters miss multi-turn, tool-using, stateful agent failures.
+Emotional target: make ScopeTrace feel research-grounded, not improvised.
+Proof detail: map five paper anchors to product choices.
+
+Deck style lock: dark graphite native slide canvas, warm off-white text, cyan for architecture, red for risk gaps, amber for research anchors, thin geometric diagram language.
+Slide-frame discipline: native 16:9 presentation slide canvas only; no paper/poster/mockup scene.
+
+Scene/background: deep graphite internal slide background, faint grid and trace lines.
+Subject: research map with left column "Research signal" and right column "ScopeTrace design choice".
+Style/medium: premium technical literature synthesis slide, structured comparison diagram.
+Composition/framing: 16:9, top title; five rows of research anchors flowing into three architecture blocks.
+Color palette: graphite, off-white, amber research cards, cyan design blocks, red risk tags.
+
+Text (verbatim):
+"RESEARCH SIGNAL"
+"Agent safety needs dynamic tests, interaction traces, and runtime gates."
+"AgentDojo"
+"Dynamic tool-use prompt injection"
+"AgentHarm"
+"Multi-step harmful agent tasks"
+"R-Judge"
+"Risk judgment over interaction records"
+"ToolEmu"
+"Sandboxed tool-risk evaluation"
+"AutoRedTeamer"
+"Multi-agent + memory-guided attacks"
+"ScopeTrace translates this into:"
+"RedTeam Logic"
+"ScopeTrace Engine"
+"Self ScopeTrace Update"
+
+Hierarchy notes: title largest; row labels readable; the three architecture blocks at bottom/right should dominate the takeaway.
+Constraints: high English typography accuracy; no extra paper names; no fake numbers; no watermark; no gibberish; no slide number; no paper edges, wall, desk, room, print mockup, or poster frame.
+Avoid: bibliography clutter, academic poster look, tiny footnotes, generic AI icons, cyberpunk.

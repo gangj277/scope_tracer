@@ -1,0 +1,40 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide for technical hackathon pitch
+
+Primary request: Rebuild slide 5 as a technical architecture slide for Self ScopeTrace Update.
+Audience: technical judges and AI safety engineers.
+Product truth: The system closes the loop by turning red-team evidence into candidate guardrails, human-approved hard gates, and replayed runtime enforcement.
+Why now: scalable agent safety needs policies that evolve from observed behavior, not one-time prompt patches.
+Emotional target: make the architecture feel like a durable learning loop.
+Proof detail: show evidence packs, recommended hard gate, approval status, approved precedent, runtime enforcement, replay proof.
+
+Deck style lock: dark graphite native slide canvas, warm off-white text, cyan for approved/enforced policy, red for detected violation, amber for candidate evidence, thin geometric lifecycle loop.
+Slide-frame discipline: native 16:9 presentation slide canvas only; no paper/poster/mockup scene.
+
+Scene/background: deep graphite internal slide background, faint grid and trace lines.
+Subject: circular self-update pipeline: Attack Result -> Evidence Pack -> Recommended Hard Gate -> Human Approval -> Approved Precedent -> Runtime Enforcement -> Replay Proof -> Policy Version.
+Style/medium: premium technical lifecycle architecture diagram, not marketing splash.
+Composition/framing: 16:9, top title, large circular loop in center, right side "three-layer architecture" stack.
+Color palette: graphite, off-white, amber candidate state, cyan approved/enforced state, red violation state.
+
+Text (verbatim):
+"SELF SCOPETRACE UPDATE"
+"Red-team evidence becomes replayable guardrail infrastructure."
+"Attack Result"
+"Evidence Pack"
+"Recommended Hard Gate"
+"Human Approval"
+"Approved Precedent"
+"Runtime Enforcement"
+"Replay Proof"
+"Policy Version"
+"Three-layer architecture"
+"RedTeam Logic"
+"ScopeTrace Engine"
+"Self ScopeTrace Update"
+"From patching prompts → evolving policy"
+
+Hierarchy notes: title and loop labels must be readable; three-layer architecture stack should be visually prominent; bottom takeaway line strong.
+Constraints: high English typography accuracy; no fake claims; no watermark; no gibberish; no slide number; no paper edges, wall, desk, room, print mockup, or poster frame.
+Avoid: generic growth loop, glossy 3D, fake app UI, tiny text, marketing buzzword clutter.

@@ -1,0 +1,47 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide, second slide of a hackathon product pitch deck
+
+Primary request: Build a premium native presentation slide image explaining why agent autonomy turns AI safety into authority control.
+
+Audience: AI safety judges, enterprise AI builders, product/security engineers.
+Product truth: As agents gain more autonomy, safety must govern authority, not only language.
+Why now: Enterprise AX agents are connecting to tools, private context, side effects, and persistent memory.
+Emotional target: the audience should feel the safety problem expanding from a chat box into an operating system.
+Proof detail: show four autonomy axes expanding outward from a central enterprise agent core.
+
+Deck style lock: Premium dark enterprise safety command-center slide; graphite black background; warm off-white text; red only for risk, cyan for legitimate system flow, amber for external/untrusted expansion; thin geometric trace lines; native slide canvas only.
+Slide-frame discipline: this must read as a native 16:9 presentation slide canvas, not as a poster, paper sheet, framed print, desk scene, or photographed infographic.
+
+Scene/background: internal slide background only, deep graphite black with very low grain, faint technical grid, subtle trace lines.
+Subject: central "AGENT CORE" node with four expanding autonomy axes: More tools, More private context, More side effects, Longer memory. Each axis has small concrete examples.
+Style/medium: premium enterprise command-center diagram, radial authority expansion map, restrained keynote slide.
+Composition/framing: 16:9, left title block and body text, right two-thirds radial map. Strong safe margins. Presentation-distance readability.
+Lighting/mood: serious, precise, strategic; no sci-fi spectacle.
+Color palette: graphite black, warm off-white, cyan safe system lines, amber expansion nodes, red outer risk boundary.
+Materials/textures: subtle internal slide grain only, no paper edges.
+
+Text (verbatim):
+"AUTONOMY SHIFT"
+"As agents gain autonomy, the safety problem becomes authority control."
+"Agents are moving from answering questions to operating across enterprise systems."
+"More tools"
+"search · retrieve · update · send"
+"More private context"
+"CRM · contracts · Slack · tickets"
+"More side effects"
+"email · workflow · CRM mutation"
+"Longer memory"
+"preferences · history · persistent state"
+"The more authority an agent has, the less prompt-only safety scales."
+
+Hierarchy notes:
+- "AUTONOMY SHIFT" is a small uppercase overline.
+- Action title is the dominant headline.
+- Body text sits below title in smaller but readable type.
+- Four axis labels are clear, each with one short example line.
+- Bottom callout is strong and legible.
+
+Constraints: high English typography accuracy; keep text legible; preserve hierarchy; no watermark; no gibberish; no extra decorative icons; keep all design elements inside a clean slide canvas; no paper edges; no page curl; no wall or desk context; no framed-board look; no mockup scene.
+
+Avoid: humanoid robots, AI brain art, flashy cyberpunk, generic stock enterprise illustration, cluttered labels, tiny unreadable text, poster-on-paper aesthetics, physical scene context.

@@ -1,0 +1,39 @@
+Use case: infographic-diagram
+Task family: diagram-explainer
+Asset type: 16:9 keynote slide for technical hackathon pitch
+
+Primary request: Rebuild slide 1 as market/current-state framing for agent safety.
+Audience: AI safety judges, enterprise AI builders, technical reviewers.
+Product truth: AI safety is moving from output filtering to runtime control over agents that act.
+Why now: agent benchmarks now evaluate tool use, interactive environments, prompt injection, harmful multi-step tasks, and safety failures beyond chatbot responses.
+Emotional target: make the audience agree that the problem is real, current, and technically measurable.
+Proof detail: cite benchmark scale visually: AgentDojo 97 tasks / 629 security cases; Agent-SafetyBench 2,000 test cases; AgentHarm 110 malicious agent tasks.
+
+Deck style lock: dark graphite native slide canvas, warm off-white text, cyan system paths, red risk paths, amber external/untrusted context, thin geometric technical diagram language, no paper/poster/mockup scene.
+Slide-frame discipline: native 16:9 presentation slide canvas only; all visuals are inside the slide.
+
+Scene/background: deep graphite black internal slide background, subtle grid, very low grain.
+Subject: left title block; right market/research evidence grid showing the move from chatbot safety to agent safety benchmarks.
+Style/medium: premium technical market landscape slide, restrained enterprise safety command-center.
+Composition/framing: 16:9, strong safe margins, left title and thesis, right 3 benchmark evidence cards plus bottom transition arrow.
+Color palette: graphite, off-white, cyan, red, amber.
+
+Text (verbatim):
+"CURRENT STATE"
+"AI safety is moving from output filters to agent behavior control."
+"The field is no longer only testing what models say."
+"It is testing what agents do."
+"AgentDojo"
+"97 tasks · 629 security cases"
+"Tool-use prompt injection"
+"Agent-SafetyBench"
+"2,000 test cases"
+"10 common failure modes"
+"AgentHarm"
+"110 malicious agent tasks"
+"Multi-step harmful actions"
+"From safe responses → safe execution"
+
+Hierarchy notes: title largest; benchmark cards medium and readable; bottom transition line should be highly legible.
+Constraints: high English typography accuracy; no fake citations beyond the exact paper names and numbers above; no watermark; no gibberish; no extra tiny text; no slide number; no paper edges, wall, desk, room, print mockup, or poster frame.
+Avoid: generic AI brain art, robots, cyberpunk spectacle, tiny labels, random made-up metrics, glossy 3D.

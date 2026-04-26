@@ -1,0 +1,11 @@
+{
+  "name": "b2b-agent-red-teaming",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix demo-agent run dev",
+    "build": "npm --prefix demo-agent run build",
+    "start": "npm --prefix demo-agent run start",
+    "lint": "npm --prefix demo-agent run lint",
+    "test": "npm --prefix demo-agent run test"
+  }
+}
